@@ -90,5 +90,4 @@ Steps to Deploy and Run the Project:
 |---------|
 | Sangeetha Nair |
 | Viviana Lopes |
-| Nandor |
-| Purvi |
+| Nandor Gallo | 
