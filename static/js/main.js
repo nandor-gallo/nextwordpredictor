@@ -4,11 +4,7 @@ var oldVal = "";
 var preVal = "";
 var isbackspace = false;
 
-<<<<<<< .merge_file_dKfpof
-var isMicEnabled = true;
-=======
 var isMicEnabled = false;
->>>>>>> .merge_file_zNHG0l
 
 function setExcelData(jsonResponse){
 	var header = "<div class='thead'>";
@@ -131,11 +127,6 @@ function setValue(obj){
 }
 
 function setSpeechValue(wordSaid){
-<<<<<<< .merge_file_dKfpof
-	document.getElementById("pText").value = document.getElementById("pText").value.trim()+" "+wordSaid;
-	document.getElementById("pText").focus();
-	sendData(wordSaid,'Y')
-=======
 	var isExisting = 'N';
 	for(var i =0 ; i<3;i++){
 		var obj = document.getElementById("rc"+i);
@@ -150,7 +141,6 @@ function setSpeechValue(wordSaid){
 	document.getElementById("pText").value = document.getElementById("pText").value.trim()+" "+wordSaid;
 	document.getElementById("pText").focus();
 	sendData(wordSaid, isExisting);
->>>>>>> .merge_file_zNHG0l
 	getTextBoxValue();
 }
 
@@ -197,20 +187,11 @@ async function callAPI(data){
 				document.getElementById("predict").style.display = "block";
 				document.getElementById("nopredict").style.display = "none";
 			}
-<<<<<<< .merge_file_dKfpof
-			// Check if the mic is enabled/disabled
-			
-			
-=======
->>>>>>> .merge_file_zNHG0l
 			} else {
 				document.getElementById("predict").style.display = "none";
 				document.getElementById("nopredict").style.display = "block";
 			}
-<<<<<<< .merge_file_dKfpof
-=======
 			// Check if the mic is enabled/disabled
->>>>>>> .merge_file_zNHG0l
 			if(isMicEnabled){
 				getSpeechToText();
 			}

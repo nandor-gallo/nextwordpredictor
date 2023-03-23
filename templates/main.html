@@ -21,11 +21,7 @@
 					<textarea id="pText" name="typing" rows="4" cols="50"></textarea><br>
 				</div>
 				<div>
-<<<<<<< .merge_file_T17hZR
-					<button id='mic-button' style="font-size:24px;color:red"> Microphone <i class="fa fa-microphone"></i></button>
-=======
 					<button id='mic-button' style="font-size:24px;color:black"> Microphone <i class="fa fa-microphone"></i></button>
->>>>>>> .merge_file_Uu4tw6
 				</div>
 				<div id="predict" style="display:none">
 					<h2>Word recommendation with accuracy percentage.</h2>
@@ -66,10 +62,7 @@
 	// When mic button clicked Enable/Disable the mic being used
 	document.getElementById("mic-button").onclick = function (){
 		isMicEnabled = isMicEnabled ? false:true
-<<<<<<< .merge_file_T17hZR
-=======
 		console.log("Mic status: " + isMicEnabled)
->>>>>>> .merge_file_Uu4tw6
 		if(isMicEnabled){
 			document.getElementById("mic-button").style.color = "red"
 			getSpeechToText()

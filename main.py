@@ -37,7 +37,7 @@ data_get_args.add_argument("data", type=str, help="Word Typed")
 
 @app.route("/")
 def index():
-    #textToSpeech("Enter username and password")
+    textToSpeech("Enter username and password")
     return render_template('login.html')
 
 
@@ -48,8 +48,8 @@ def main():
     passwrd = request.form['pass']
     if uname == "viviana" and passwrd == "123456":
         print("password matched")
-        # textToSpeech(uname)
-        #textToSpeech("Welcome to Next word prediction application")
+        textToSpeech(uname)
+        textToSpeech("Welcome to Next word prediction application")
         return render_template('main.html', name=uname)
 
 
@@ -100,10 +100,6 @@ def get_next_words():
         textToSpeech(
             "Cannot Predict Word, Please keep typing and I will provide help.")
     else:
-<<<<<<< .merge_file_gjsgtl
-
-=======
->>>>>>> .merge_file_dPYeU6
         textToSpeech("Your next predicted words are")
         for word in wordsToRead:
             textToSpeech(word)
@@ -136,6 +132,7 @@ def put_excelData():
 # Function to convert speech to text
 def speechToText():
     r = sr.Recognizer()
+    text = ""
     with sr.Microphone() as source:
         print('Listening for audio...')
         audio = r.listen(source)
