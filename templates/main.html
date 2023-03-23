@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Next Word Predictor App</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="app">
+				<form class="welcome">				
+					<a href="http://localhost:5000/collectFeedback">Give Feeback</a>&nbsp; &nbsp;<a href="http://localhost:5000/">Log Out</a>
+					<h1>Welcome, {{ name }}</h1>  
+					<h2>Next Word Prediction</h2>
+				</form>
+				<div>
+					<textarea id="pText" name="typing" rows="4" cols="50"></textarea><br>
+				</div>
+				<div>
+<<<<<<< .merge_file_T17hZR
+					<button id='mic-button' style="font-size:24px;color:red"> Microphone <i class="fa fa-microphone"></i></button>
+=======
+					<button id='mic-button' style="font-size:24px;color:black"> Microphone <i class="fa fa-microphone"></i></button>
+>>>>>>> .merge_file_Uu4tw6
+				</div>
+				<div id="predict" style="display:none">
+					<h2>Word recommendation with accuracy percentage.</h2>
+					<h3>Click on the word below that you need to select</h3>
+					<div>
+						<div class="column">
+							<div id="rc0" class="button"></div>
+							<div id="ac0"></div>
+						</div>
+						<div class="column">
+							<div id="rc1" class="button"></div>
+							<div id="ac1"></div>
+						</div>
+						<div class="column">
+							<div id="rc2" class="button"></div>
+							<div id="ac2"></div>
+						</div>
+					</div>
+				</div>
+				<div id="nopredict" style="display:none">
+					<h2>Cannot Predict Word, Please keep typing and I will provide help.</h2>
+				</div>
+			</div>
+			<div>
+				<h3>Note: You can press full-stop to complete the sentence.</h3>
+			</div>
+			<div class="app1" id="excel">
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	getExcel()
+	document.getElementById("rc0").onclick = function () { setValue(this) };
+	document.getElementById("rc1").onclick = function () { setValue(this) };
+	document.getElementById("rc2").onclick = function () { setValue(this) };
+	// When mic button clicked Enable/Disable the mic being used
+	document.getElementById("mic-button").onclick = function (){
+		isMicEnabled = isMicEnabled ? false:true
+<<<<<<< .merge_file_T17hZR
+=======
+		console.log("Mic status: " + isMicEnabled)
+>>>>>>> .merge_file_Uu4tw6
+		if(isMicEnabled){
+			document.getElementById("mic-button").style.color = "red"
+			getSpeechToText()
+		}else{
+			document.getElementById("mic-button").style.color = "black"
+		}
+		
+	}
+
+	document.getElementById("pText").onkeydown = function (event) {
+		if (isCall && event.keyCode == 32) {
+			document.getElementById("pText").value = document.getElementById("pText").value.trim();
+		}
+	};
+	document.getElementById("pText").onkeyup = function (event) { processData(event) };
+
+</script>
+
+</html>
