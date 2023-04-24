@@ -4,6 +4,10 @@ Predicting three words that comes next with Tensorflow. Implement LSTM to develo
 ## Project Intro
 The purpose of this project is to train next word predicting model. Model should be able to suggest three words as the next word after user has input word. The model is trained with technology dataset. Python as backend and JavaScript/HTML as Frontend.
 
+
+
+<img src="resources/UI_image.JPG" height="300">
+
 ### Methods Used
 * Language Prediction
 * Natural Language Processing
@@ -88,6 +92,6 @@ Steps to Deploy and Run the Project:
 
 |Name     |
 |---------|
-| Sangeetha Nair |
-| Viviana Lopes |
 | Nandor Gallo | 
+| Sangeetha Nair |
+| Viviana Lopes 
