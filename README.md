@@ -6,8 +6,10 @@ The purpose of this project is to train next word predicting model. Model should
 
 
 
-<img src="resources/UI_image.JPG" height="300">
+<img src="resources/logo.jpg" height="300">
 
+
+<img src="resources/features.JPG" height="300">
 ### Methods Used
 * Language Prediction
 * Natural Language Processing
